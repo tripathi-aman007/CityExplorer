@@ -1,0 +1,96 @@
+body {
+  background: linear-gradient(145deg, #c9e9ff, #e6f4ff);
+  font-family: "Arial", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.a {
+  background: linear-gradient(145deg, #c9e9ff, #e6f4ff);
+}
+
+header {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.gradient-card {
+  background: linear-gradient(145deg, #e0e0e0, #f0f0f0);
+  border-radius: 15px;
+  box-shadow: 8px 8px 15px #b8b9be, -8px -8px 15px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.gradient-card:hover {
+  box-shadow: 8px 8px 20px #b8b9be, -8px -8px 20px #fff;
+}
+
+.card-body {
+  background: linear-gradient(145deg, #ece9e6, #ffffff);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+footer {
+  margin-top: auto;
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header-widgets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.searchIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.header-widgets i {
+  margin-right: 10px;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.header-widgets i:hover {
+  transform: scale(1.2);
+}
+
+.neumorphic-card {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #bfbfbf, -5px -5px 10px #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.neumorphic-card:hover {
+  box-shadow: 7px 7px 15px #bfbfbf, -7px -7px 15px #ffffff;
+}
+
+.neumorphic-card-body {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.neumorphic-card-title {
+  font-weight: bold;
+}
+
+.city-card:hover {
+  background: #8299f6;
+  color: white;
+  cursor: pointer;
+}
