@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CityExplorer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light a">
+      <a class="navbar-brand" href="#">CityExplorer</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="places.html"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="places.html"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+      <h1>Welcome to CityExplorer</h1>
+      <p>
+        Discover the best places, food, restaurants, and cinemas in the city
+      </p>
+      <div class="header-widgets">
+        <i class="fas fa-map-marked-alt fa-2x mr-5"></i>
+        <i class="fas fa-utensils fa-2x mr-5"></i>
+        <i class="fas fa-concierge-bell fa-2x mr-5"></i>
+        <i class="fas fa-film fa-2x mr-5"></i>
+      </div>
+      <div class="searchIcon">
+        <form class="form-inline my-2 my-lg-0 mr-3">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="container my-5" id="places">
+      <div class="row mt-4">
+        <div class="col-md-4 mb-5">
+          <div class="card gradient-card border-0">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
+              <h5 class="card-title">Best Places</h5>
+              <p class="card-text">
+                Explore the top attractions and landmarks in the city.
+              </p>
+              <button class="btn btn-outline-primary rounded px-3 p-2" onclick="chooseCities()">
+                Explore More
+                <span class="bi bi-arrow-right ml-2"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" id="food">
+          <div class="card gradient-card border-0">
+            <div class="card-body text-center">
+              <i class="fas fa-utensils fa-3x mb-3"></i>
+              <h5 class="card-title">Best Food</h5>
+              <p class="card-text">
+                Discover the most delicious food and culinary experiences.
+              </p>
+              <button class="btn btn-outline-primary px-3 p-2">
+                Explore More
+                <span class="bi bi-arrow-right ml-2"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" id="restaurants">
+          <div class="card gradient-card border-0">
+            <div class="card-body text-center">
+              <i class="fas fa-concierge-bell fa-3x mb-3"></i>
+              <h5 class="card-title">Best Restaurants</h5>
+              <p class="card-text">
+                Find the finest restaurants and dining establishments.
+              </p>
+              <button class="btn btn-outline-primary px-3 p-2">
+                Explore More
+                <span class="bi bi-arrow-right ml-2"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" id="cinemas">
+          <div class="card gradient-card border-0">
+            <div class="card-body text-center">
+              <i class="fas fa-film fa-3x mb-3"></i>
+              <h5 class="card-title">Best Cinemas</h5>
+              <p class="card-text">
+                Enjoy movies at the best cinemas in the city.
+              </p>
+              <button class="btn btn-outline-primary px-3 p-2">
+                Explore More
+                <span class="bi bi-arrow-right ml-2"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" id="hospital">
+          <div class="card gradient-card border-0">
+            <div class="card-body text-center">
+              <i class="fas fa-utensils fa-3x mb-3"></i>
+              <h5 class="card-title">Best Hospitals</h5>
+              <p class="card-text text-muted">
+                Find best doctors & hospitals near you.
+              </p>
+              <button class="btn btn-outline-primary px-3 p-2">
+                Explore More
+                <span class="bi bi-arrow-right ml-2"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" id="nightClubs">
+          <div class="card gradient-card border-0">
+            <div class="card-body text-center">
+              <i class="fas fa-utensils fa-3x mb-3"></i>
+              <h5 class="card-title">Night Clubs</h5>
+              <p class="card-text text-muted">
+                Find best discos or night life in your city.
+              </p>
+              <button class="btn btn-outline-primary px-3 p-2" onclick="hospitalPage()">
+                Explore More
+                <span class="bi bi-arrow-right ml-2"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5" id="attractions">
+      <h2 class="text-center mb-5">Top Attractions</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Attraction 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Attraction 1</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Attraction 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Attraction 2</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Attraction 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Attraction 3</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5" id="food">
+      <h2 class="text-center mb-5">Best Food</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Food 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food 1</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Food 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food 2</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Food 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Food 3</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5" id="restaurants">
+      <h2 class="text-center mb-5">Best Restaurants</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Restaurant 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Restaurant 1</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Restaurant 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Restaurant 2</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Restaurant 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Restaurant 3</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5" id="cinemas">
+      <h2 class="text-center mb-5">Best Cinemas</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Cinema 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Cinema 1</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Cinema 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Cinema 2</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Cinema 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Cinema 3</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local Tips Section -->
+    <section class="container my-5" id="local-tips">
+      <h2 class="text-center mb-5">Local Tips</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="neumorphic-card h-100">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Tip 1"
+            />
+            <div class="neumorphic-card-body">
+              <h5 class="card-title">Tip 1</h5>
+              <p class="card-text">
+                Check out the local markets for fresh produce and unique
+                souvenirs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="neumorphic-card h-100">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Tip 2"
+            />
+            <div class="neumorphic-card-body">
+              <h5 class="card-title">Tip 2</h5>
+              <p class="card-text">
+                Take a walk along the riverfront for stunning views of the city
+                skyline.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="neumorphic-card h-100">
+            <img
+              src="https://via.placeholder.com/300x200"
+              class="card-img-top"
+              alt="Tip 3"
+            />
+            <div class="neumorphic-card-body">
+              <h5 class="card-title">Tip 3</h5>
+              <p class="card-text">
+                Don't miss out on the local street food scene - it's a culinary
+                adventure!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+      <p>&copy; 2024 CityExplorer. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
